@@ -28,7 +28,7 @@ A gesture-controlled maze game using Google's Teachable Machine for pose detecti
 1. Open Terminal/Command Prompt
 2. Navigate to the project folder:
    ```bash
-   cd "/Users/mahalakshmimahadevan/Development/LCNC - Week 17 Final Assignment"
+   cd pose-based-maze-navigation
    ```
 3. Run the Python server:
    ```bash
