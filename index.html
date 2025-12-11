@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Teachable Machine Maze Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 Teachable Machine Maze Game</h1>
+        
+        <div class="instructions">
+            <p><strong>How to Play:</strong> Point left to move left, right to move right, up to move up, down to move down. Stay neutral to stop. Navigate the blue circle to the red goal!</p>
+        </div>
+        
+        <div class="game-area">
+            <canvas id="mazeCanvas"></canvas> 
+            
+            <div class="webcam-section">
+                <div class="webcam-container">
+                    <div class="webcam-placeholder">Webcam will appear here when you start the game</div>
+                </div>
+                
+                <div id="prediction">
+                    <div class="status">Click "Start Game" to begin</div>
+                    <div class="confidence"></div>
+                    <div class="debug-info"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="startBtn">Start Game</button>
+            <button id="stopBtn" disabled>Stop Game</button>
+            <button id="resetBtn">Reset Maze</button>
+        </div>
+    </div>
+
+    <!-- Load scripts in correct order: 1. TensorFlow.js, 2. Teachable Machine, 3. maze.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
+    <script src="maze.js"></script>
+</body>
+</html>
